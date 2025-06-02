@@ -29,8 +29,7 @@ A simple, elegant macOS menu bar application that reminds you to take regular br
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/BreakReminder.git
-   cd BreakReminder
+   cd [BreakReminder](https://github.com/shariaralphabyte/Break-Time-Mac-Os.git)
    ```
 
 2. **Open in Xcode**
@@ -45,7 +44,7 @@ A simple, elegant macOS menu bar application that reminds you to take regular br
 
 ### Option 2: Download Release
 
-1. Download the latest release from the [Releases page]([https://github.com/yourusername/BreakReminder/releases](https://github.com/shariaralphabyte/Break-Time-Mac-Os.git))
+1. Download the latest release from the [Releases page](https://github.com/shariaralphabyte/Break-Time-Mac-Os.git))
 2. Move `BreakReminder.app` to your `Applications` folder
 3. Right-click the app and select "Open" (first time only)
 4. Grant notification permissions
