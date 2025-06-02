@@ -1,17 +1,34 @@
-//
-//  breakTimeApp.swift
-//  breakTime
-//
-//  Created by MA Kader on 02/06/2025.
-//
-
 import SwiftUI
+import UserNotifications
 
 @main
-struct breakTimeApp: App {
+struct BreakReminderApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Settings {
+            EmptyView()
         }
+    }
+}
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+    var statusBarController: StatusBarController!
+    
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        // Request notification permissions
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if granted {
+                print("Notification permission granted")
+            } else {
+                print("Notification permission denied")
+            }
+        }
+        
+        // Set up status bar
+        statusBarController = StatusBarController()
+        
+        // Hide dock icon
+        NSApp.setActivationPolicy(.accessory)
     }
 }
