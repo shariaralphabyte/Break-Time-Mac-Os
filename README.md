@@ -268,9 +268,9 @@ SOFTWARE.
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/BreakReminder/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/BreakReminder/discussions)
-- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/shariaralphabyte/Break-Time-Mac-Os.git/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/shariaralphabyte/Break-Time-Mac-Os/discussions)
+- **Email**: contact.shariar.cse@gmail.com
 
 ---
 
