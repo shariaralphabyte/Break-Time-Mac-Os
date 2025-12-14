@@ -11,11 +11,9 @@ class BreakTimer: ObservableObject {
     
     weak var delegate: BreakTimerDelegate?
     private var timer: Timer?
-    private var backgroundTask: NSBackgroundActivityScheduler?
     
     init() {
         loadSettings()
-        setupBackgroundActivity()
     }
     
     func startTimer() {
@@ -56,17 +54,7 @@ class BreakTimer: ObservableObject {
         }
     }
     
-    private func setupBackgroundActivity() {
-        backgroundTask = NSBackgroundActivityScheduler(identifier: "com.breakreminder.timer")
-        backgroundTask?.repeats = true
-        backgroundTask?.interval = TimeInterval(intervalMinutes * 60)
-        backgroundTask?.qualityOfService = .utility
-        
-        backgroundTask?.schedule { [weak self] completion in
-            self?.delegate?.breakTimeReached()
-            completion(.finished)
-        }
-    }
+
     
     var formattedTimeRemaining: String {
         let minutes = Int(timeRemaining) / 60
